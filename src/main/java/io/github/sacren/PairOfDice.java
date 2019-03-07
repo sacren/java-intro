@@ -1,5 +1,4 @@
 /**
- *
  * PairOfDice class with dice rolling for a pair of numbers between 1 and 6.
  *
  * <p>Private data:
