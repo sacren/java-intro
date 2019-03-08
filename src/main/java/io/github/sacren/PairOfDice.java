@@ -11,6 +11,7 @@
  *
  * <p>Public methods:
  * +getDice():int[]
+ * +getTotal():int
  * +roll():void
  * +toString():String
  */
@@ -38,6 +39,11 @@ public class PairOfDice {
         dice[0] = die1;
         dice[1] = die2;
         return dice;
+    }
+
+    /** PairOfDice public method for the total of each rolling. */
+    public int getTotal() {
+        return die1 + die2;
     }
 
     /**

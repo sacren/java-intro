@@ -9,10 +9,8 @@ public class TestPairOfDice {
         System.out.printf("Before rolling: %s%n", dice);
         System.out.println();
         int count = 0;
-        int[] diceArray;
         for ( ; ; ) {
-            diceArray = dice.getDice();
-            if (diceArray[0] + diceArray[1] == 2) {
+            if (dice.getTotal() == 2) {
                 break;
             }
             dice.roll();
