@@ -19,8 +19,8 @@ import java.util.Arrays;
 
 public class PairOfDice {
     /* private instance data */
-    private int die1;
-    private int die2;
+    private int die1; /* random number shown on the first die rolled */
+    private int die2; /* random number shown on the second die rolled */
 
     /** PairOfDice default constructor. */
     public PairOfDice() {
