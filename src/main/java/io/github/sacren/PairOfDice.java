@@ -52,7 +52,7 @@ public class PairOfDice {
     /** PairOfDice instance description. */
     public String toString() {
         return String.format(
-                "Pair of dice rolled %s",
+                "Pair of dice %s",
                 Arrays.toString(getDice()));
     }
 }
