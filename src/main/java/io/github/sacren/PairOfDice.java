@@ -41,6 +41,30 @@ public class PairOfDice {
         return dice;
     }
 
+    /** PairOfDice setter for die1. */
+    public void setDie1(int number) {
+        if (number > 6 || number < 1) {
+            throw new IllegalArgumentException(
+                    String.format("%d is invalid!", number));
+        }
+        die1 = number;
+    }
+
+    /** PairOfDice setter for die2. */
+    public void setDie2(int number) {
+        if (number > 6 || number < 1) {
+            throw new IllegalArgumentException(
+                    String.format("%d is invalid!", number));
+        }
+        die2 = number;
+    }
+
+    /** PairOfDice setter for the pair of dice. */
+    public void setDice(int n, int m) {
+        setDie1(n);
+        setDie2(m);
+    }
+
     /** PairOfDice public method for the total of each rolling. */
     public int getTotal() {
         return die1 + die2;

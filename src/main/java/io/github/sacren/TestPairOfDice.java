@@ -25,5 +25,10 @@ public class TestPairOfDice {
         }
         System.out.println();
         System.out.printf("Rolled %d times with pair of dice equal to 2%n", count);
+        System.out.println();
+        System.out.println("=== Reset dice ===");
+        System.out.println();
+        dice.setDice(6, 6);
+        System.out.println(dice);
     }
 }
