@@ -4,7 +4,14 @@
 public class TestPairOfDice {
     /** Test driver of rolling the dice for the sum of 2. */
     public static void main(String[] args) {
-        PairOfDice dice = new PairOfDice();
+        /* We could do:
+         *
+         * PairOfDice dice = new PairOfDice();
+         *
+         * but rather instantiate with impractical value pair to bypass random
+         * numbers. It works indeed.
+         */
+        PairOfDice dice = new PairOfDice(0, 0);
         int count = 0;
         System.out.println();
         System.out.println("Roll the dice...");
