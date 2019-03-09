@@ -30,5 +30,10 @@ public class TestPairOfDice {
         System.out.println();
         dice.setDice(6, 6);
         System.out.println(dice);
+        System.out.println();
+        System.out.println("=== Throw Exception ===");
+        System.out.println();
+        dice.setDice(7, 6);
+        System.out.println(dice);
     }
 }
