@@ -5,18 +5,18 @@ public class TestPairOfDice {
     /** Test driver of rolling the dice for the sum of 2. */
     public static void main(String[] args) {
         PairOfDice dice = new PairOfDice();
-        System.out.println();
-        System.out.printf("Before rolling: %s%n", dice);
-        System.out.println();
         int count = 0;
+        System.out.println();
+        System.out.println("Roll the dice...");
+        System.out.println();
         for ( ; ; ) {
+            dice.roll();
+            System.out.printf("Roll %d: %s%n", ++count, dice);
             if (dice.getTotal() == 2) {
                 break;
             }
-            dice.roll();
-            System.out.printf("Roll %d: ", ++count);
-            System.out.println(dice);
         }
+        System.out.println();
         System.out.printf("Rolled %d times with pair of dice equal to 2%n", count);
     }
 }
