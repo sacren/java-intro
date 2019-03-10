@@ -34,6 +34,8 @@ public class StatCalc {
         count++;
         sum += number;
         squareSum += number * number;
+        max = count == 1 || number > max ? number : max;
+        min = count == 1 || number < min ? number : min;
     }
 
     /**
