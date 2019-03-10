@@ -54,6 +54,16 @@ public class StatCalc {
         return sum;
     }
 
+    /** StatCalc getter for the max of the dataset. */
+    public double getMax() {
+        return max;
+    }
+
+    /** StatCalc getter for the min of the dataset. */
+    public double getMin() {
+        return min;
+    }
+
     /**
      * StatCalc public method for the average of all the items that have been
      * entered.
