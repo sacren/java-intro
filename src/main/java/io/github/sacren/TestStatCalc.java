@@ -21,5 +21,19 @@ public class TestStatCalc {
             System.out.println(calc);
         }
         inputStream.close();
+        System.out.println();
+        System.out.println("=== List of stats ===");
+        System.out.println();
+        System.out.printf(
+                "Number of rolls is %d%n"
+                        + "Sum of the numbers in the dataset is %.2f%n"
+                        + "Sum of the square of numbers in the dataset is %.2f%n"
+                        + "Max number of the dataset is %.2f%n"
+                        + "Min number of the dataset is %.2f%n",
+                calc.getCount(),
+                calc.getSum(),
+                calc.getSquareSum(),
+                calc.getMax(),
+                calc.getMin());
     }
 }

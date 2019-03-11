@@ -48,6 +48,11 @@ public class StatCalc {
         return sum;
     }
 
+    /** StatCalc getter for the sum of all the number squares. */
+    public double getSquareSum() {
+        return squareSum;
+    }
+
     /** StatCalc getter for the max of the dataset. */
     public double getMax() {
         return max;
