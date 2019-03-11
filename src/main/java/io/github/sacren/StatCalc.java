@@ -25,10 +25,10 @@ public class StatCalc {
     private double min;
 
     /**
-     * StatCalc public method to add a number to the dataset.
+     * StatCalc setter for the overall instance data.
      *
-     * <p>The statistics will be computed for all the numbers that have been
-     * added to the dataset using this method.
+     * <p>The statistics will be computed and updated for all the numbers added
+     * to the instance data by this method.
      */
     public void enter(double number) {
         count++;
@@ -38,18 +38,12 @@ public class StatCalc {
         min = count == 1 || number < min ? number : min;
     }
 
-    /**
-     * StatCalc public method for the number of items that have been entered
-     * into the dataset.
-     */
+    /** StatCalc getter for the number of items entered into the dataset. */
     public int getCount() {
         return count;
     }
 
-    /**
-     * StatCalc public method for the sum of all the numbers that have been
-     * entered.
-     */
+    /** StatCalc getter for the sum of all the numbers entered. */
     public double getSum() {
         return sum;
     }
@@ -65,8 +59,7 @@ public class StatCalc {
     }
 
     /**
-     * StatCalc public method for the average of all the items that have been
-     * entered.
+     * StatCalc getter for the average of all the numbers entered.
      *
      * <p>The return value is double or NaN if none have been entered.
      */
@@ -75,8 +68,7 @@ public class StatCalc {
     }
 
     /**
-     * StatCalc public method for the standard deviation of all the items that
-     * have been entered.
+     * StatCalc getter for the standard deviation of all the numbers entered.
      *
      * <p>The return value is double or NaN if none have been entered.
      */
