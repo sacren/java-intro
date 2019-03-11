@@ -19,8 +19,8 @@ import java.util.Arrays;
 
 public class PairOfDice {
     /* private instance data */
-    private int die1; /* random number shown on the first die rolled */
-    private int die2; /* random number shown on the second die rolled */
+    private int die1; /* number on the first die */
+    private int die2; /* number on the second die */
 
     /** PairOfDice default constructor. */
     public PairOfDice() {
@@ -33,7 +33,7 @@ public class PairOfDice {
         this.die2 = die2;
     }
 
-    /** PairOfDice getter for the numbers on the dice rolled. */
+    /** PairOfDice getter for each number on the dice rolled. */
     public int[] getDice() {
         int[] dice = new int[2];
         dice[0] = die1;
@@ -65,14 +65,14 @@ public class PairOfDice {
         setDie2(m);
     }
 
-    /** PairOfDice public method for the total of each rolling. */
+    /** PairOfDice getter for the total after each roll. */
     public int getTotal() {
         return die1 + die2;
     }
 
     /**
-     * PairOfDice public method for a pair of dice rolled out with a pair of
-     * random numbers between 1 and 6.
+     * PairOfDice roll method that resets the numbers between 1 and 6 after
+     * each roll.
      */
     public void roll() {
         die1 = (int)(Math.random() * 6) + 1;
