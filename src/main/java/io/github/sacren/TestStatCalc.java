@@ -21,6 +21,11 @@ public class TestStatCalc {
             System.out.println(calc);
         }
         inputStream.close();
+        listStats(calc);
+    }
+
+    /* static helper for list of stats */
+    private static void listStats(StatCalc calc) {
         System.out.println();
         System.out.println("=== List of stats ===");
         System.out.println();
