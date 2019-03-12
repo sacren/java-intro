@@ -25,7 +25,12 @@ public class TestStatCalc {
             System.out.println(calc);
         }
         inputStream.close();
-        listStats(calc);
+        if (calc.getCount() == 0) {
+            System.out.println();
+            System.out.println("No stats at all!");
+        } else {
+            listStats(calc);
+        }
     }
 
     /* static helper for list of stats */
