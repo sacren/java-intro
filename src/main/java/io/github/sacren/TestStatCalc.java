@@ -12,8 +12,12 @@ public class TestStatCalc {
         Scanner inputStream = new Scanner(System.in);
         for ( ; ; ) {
             System.out.println();
-            System.out.print("Enter a number or 0 to stop: ");
+            System.out.print("Enter a positive number or 0 to stop: ");
             number = inputStream.nextDouble();
+            if (number < 0) {
+                throw new IllegalArgumentException(
+                        String.format("%f is invalid!", number));
+            }
             if ((int)number == 0) {
                 break;
             }
