@@ -4,7 +4,7 @@
  * <p>An object of class StatCalc can be used to compute several simple
  * statistics for a set of numbers.
  *
- * <p>Numbers are entered into the dataset using the enter(double) method.
+ * <p>Numbers are entered into the dataset using the addStats(double) method.
  * Methods are provided to return the statistics for the set of numbers that
  * have been entered.
  *
@@ -30,7 +30,7 @@ public class StatCalc {
      * <p>The statistics will be computed and updated for all the numbers added
      * to the instance data by this method.
      */
-    public void enter(double number) {
+    public void addStats(double number) {
         count++;
         sum += number;
         squareSum += number * number;

@@ -21,7 +21,7 @@ public class TestStatCalc {
             if ((int)number == 0) {
                 break;
             }
-            calc.enter(number);
+            calc.addStats(number);
             System.out.println(calc);
         }
         inputStream.close();
