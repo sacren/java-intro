@@ -43,12 +43,14 @@ public class TestStatCalc {
                         + "Sum of the numbers in the dataset is %.2f%n"
                         + "Sum of the square of numbers in the dataset is %.2f%n"
                         + "Mean value of the dataset is %.2f%n"
+                        + "Standard deviation fo the dataset is %.2f%n"
                         + "Max number of the dataset is %.2f%n"
                         + "Min number of the dataset is %.2f%n",
                 calc.getCount(),
                 calc.getSum(),
                 calc.getSquareSum(),
                 calc.getMean(),
+                calc.getStandardDeviation(),
                 calc.getMax(),
                 calc.getMin());
     }
