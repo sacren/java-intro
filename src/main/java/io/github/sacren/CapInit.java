@@ -28,6 +28,7 @@ public class CapInit {
         String[] array = str.split(" ");
         String s = "";
         int count = 0;
+        int index; /* first letter in word */
         char c;
         for (String word : array) {
             count++;
@@ -35,19 +36,43 @@ public class CapInit {
                 s += " ";
                 continue;
             }
-            c = word.charAt(0);
-            if (Character.isLetter(c)) {
-                s += Character.toUpperCase(c);
-            } else {
-                s += c;
+
+            /* determine the first occurrence of letter in word */
+            index = firstLetter(word);
+
+            /* no letter in word */
+            if (index < 0) {
+                if (count == array.length) {
+                    s += word;
+                } else {
+                    s += word + " ";
+                }
+                continue;
             }
+
+            /* there is a letter in word */
+            s += word.substring(0, index); /* non-letter characters */
+            s += Character.toUpperCase(word.charAt(index));
+            /* the rest of word */
             if (count == array.length) {
-                s += word.substring(1);
+                s += word.substring(index + 1);
             } else {
-                s += word.substring(1) + " ";
+                s += word.substring(index + 1) + " ";
             }
         }
         return s;
+    }
+
+    /* helper for index of the first letter in word */
+    private int firstLetter(String word) {
+        int index = 0;
+        for (char c : word.toCharArray()) {
+            if (Character.isLetter(c)) {
+                return index;
+            }
+            index++;
+        }
+        return -1; /* no letter in word */
     }
 
     /** CapInit instance desciption. */
