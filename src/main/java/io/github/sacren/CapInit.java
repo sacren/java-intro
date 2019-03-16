@@ -75,6 +75,20 @@ public class CapInit {
         return -1; /* no letter in word */
     }
 
+    /** CapInit method for capitalization in another way. */
+    public String getCap() {
+        String capitalized = "";
+        char prev = '.';
+        for (char next : userStr.toCharArray()) {
+            if (!Character.isLetter(prev) && Character.isLetter(next)) {
+                next = Character.toUpperCase(next);
+            }
+            capitalized += next;
+            prev = next;
+        }
+        return capitalized;
+    }
+
     /** CapInit instance desciption. */
     public String toString() {
         return String.format(
