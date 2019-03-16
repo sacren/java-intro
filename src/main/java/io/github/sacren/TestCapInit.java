@@ -11,6 +11,9 @@ public class TestCapInit {
         String s = inStream.nextLine();
         inStream.close();
         CapInit capital = new CapInit(s);
+        System.out.println();
+        System.out.println("=== Capitalize the first letter ===");
+        System.out.println();
         System.out.println(capital);
     }
 }

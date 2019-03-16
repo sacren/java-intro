@@ -78,8 +78,8 @@ public class CapInit {
     /** CapInit instance desciption. */
     public String toString() {
         return String.format(
-                "Input:  %s%n"
-                        + "Output: %s",
+                "Original:    %s%n"
+                        + "Capitalized: %s",
                 userStr,
                 capStr);
     }
