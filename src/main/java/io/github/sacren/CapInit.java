@@ -28,6 +28,11 @@ public class CapInit {
         return userStr;
     }
 
+    /** CapInit getter for capitalized string. */
+    public String getCapStr() {
+        return capStr;
+    }
+
     /** CapInit method to capitalize the string by the user. */
     public String capitalize(String str) {
         String capitalized = "";
