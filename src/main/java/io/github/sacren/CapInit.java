@@ -99,7 +99,7 @@ public class CapInit {
         return -1; /* no letter in word */
     }
 
-    /** CapInit instance desciption. */
+    /** CapInit instance description. */
     public String toString() {
         return String.format(
                 "Original:    %s%n"
