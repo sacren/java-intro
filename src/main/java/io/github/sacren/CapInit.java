@@ -30,7 +30,21 @@ public class CapInit {
 
     /** CapInit method to capitalize the string by the user. */
     public String capitalize(String str) {
-        String[] array = str.split(" ");
+        String capitalized = "";
+        char prev = '.';
+        for (char next : str.toCharArray()) {
+            if (!Character.isLetter(prev) && Character.isLetter(next)) {
+                next = Character.toUpperCase(next);
+            }
+            capitalized += next;
+            prev = next;
+        }
+        return capitalized;
+    }
+
+    /** CapInit method for capitalization in another way. */
+    public String getCap() {
+        String[] array = userStr.split(" ");
         String s = "";
         int count = 0;
         int index; /* first letter in word */
@@ -78,20 +92,6 @@ public class CapInit {
             index++;
         }
         return -1; /* no letter in word */
-    }
-
-    /** CapInit method for capitalization in another way. */
-    public String getCap() {
-        String capitalized = "";
-        char prev = '.';
-        for (char next : userStr.toCharArray()) {
-            if (!Character.isLetter(prev) && Character.isLetter(next)) {
-                next = Character.toUpperCase(next);
-            }
-            capitalized += next;
-            prev = next;
-        }
-        return capitalized;
     }
 
     /** CapInit instance desciption. */
