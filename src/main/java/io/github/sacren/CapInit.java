@@ -23,6 +23,11 @@ public class CapInit {
         capStr = capitalize(userStr);
     }
 
+    /** CapInit getter for user input. */
+    public String getUserStr() {
+        return userStr;
+    }
+
     /** CapInit method to capitalize the string by the user. */
     public String capitalize(String str) {
         String[] array = str.split(" ");
