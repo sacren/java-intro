@@ -15,5 +15,13 @@ public class TestCapInit {
         System.out.println("=== Capitalize the first letter ===");
         System.out.println();
         System.out.println(capital);
+        System.out.println();
+        System.out.println("=== Capitalize by getter ===");
+        System.out.println();
+        System.out.printf(
+                "Original:    %s%n"
+                        + "Capitalized: %s%n",
+                capital.getUserStr(),
+                capital.getCapStr());
     }
 }
