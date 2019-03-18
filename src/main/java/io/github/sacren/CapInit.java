@@ -9,6 +9,8 @@
  * +CapInit(userStr:String)
  *
  * <p>Public methods:
+ * +getUserStr():String
+ * +getCapStr():String
  * +capitalize(:String):String
  * +toString():String
  */
