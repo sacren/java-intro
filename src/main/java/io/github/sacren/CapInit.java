@@ -39,12 +39,12 @@ public class CapInit {
     public String capitalize(String str) {
         String capitalized = "";
         char prev = '.';
-        for (char next : str.toCharArray()) {
-            if (!Character.isLetter(prev) && Character.isLetter(next)) {
-                next = Character.toUpperCase(next);
+        for (char current : str.toCharArray()) {
+            if (!Character.isLetter(prev) && Character.isLetter(current)) {
+                current = Character.toUpperCase(current);
             }
-            capitalized += next;
-            prev = next;
+            capitalized += current;
+            prev = current;
         }
         return capitalized;
     }
