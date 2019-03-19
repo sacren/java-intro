@@ -38,12 +38,14 @@ public class CapInit {
     /** CapInit method to capitalize the string by the user. */
     public String capitalize() {
         String capitalized = "";
-        char prev = '.';
-        for (char current : userStr.toCharArray()) {
-            if (!Character.isLetter(prev) && Character.isLetter(current)) {
-                current = Character.toUpperCase(current);
+        boolean prev = false;
+        boolean current;
+        for (char c : userStr.toCharArray()) {
+            current = Character.isLetter(c);
+            if (!prev && current) {
+                c = Character.toUpperCase(c);
             }
-            capitalized += current;
+            capitalized += c;
             prev = current;
         }
         return capitalized;
