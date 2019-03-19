@@ -11,7 +11,7 @@
  * <p>Public methods:
  * +getUserStr():String
  * +getCapStr():String
- * +capitalize(:String):String
+ * +capitalize():String
  * +toString():String
  */
 public class CapInit {
@@ -22,7 +22,7 @@ public class CapInit {
     /** CapInit constructor. */
     public CapInit(String userStr) {
         this.userStr = userStr;
-        capStr = capitalize(userStr);
+        capStr = capitalize();
     }
 
     /** CapInit getter for user input. */
@@ -36,10 +36,10 @@ public class CapInit {
     }
 
     /** CapInit method to capitalize the string by the user. */
-    public String capitalize(String str) {
+    public String capitalize() {
         String capitalized = "";
         char prev = '.';
-        for (char current : str.toCharArray()) {
+        for (char current : userStr.toCharArray()) {
             if (!Character.isLetter(prev) && Character.isLetter(current)) {
                 current = Character.toUpperCase(current);
             }
