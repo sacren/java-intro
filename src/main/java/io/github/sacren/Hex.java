@@ -31,7 +31,6 @@ public class Hex {
         int decimal = 0;
         int position = 0;
         char[] a = userStr.toCharArray();
-        int digit = 0;
         for (char c : a) {
             position++;
             switch (c) {
@@ -45,36 +44,23 @@ public class Hex {
                 case '7':
                 case '8':
                 case '9':
-                    digit = Character.digit(c, 10);
-                    break;
                 case 'a':
                 case 'A':
-                    digit = 10;
-                    break;
                 case 'b':
                 case 'B':
-                    digit = 11;
-                    break;
                 case 'c':
                 case 'C':
-                    digit = 12;
-                    break;
                 case 'd':
                 case 'D':
-                    digit = 13;
-                    break;
                 case 'e':
                 case 'E':
-                    digit = 14;
-                    break;
                 case 'f':
                 case 'F':
-                    digit = 15;
+                    decimal += Math.pow(16, a.length - position) * Character.digit(c, 16);
                     break;
                 default:
                     return -1;
             }
-            decimal += Math.pow(16, a.length - position) * digit;
         }
         return decimal;
     }
