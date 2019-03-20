@@ -3,13 +3,13 @@
  *
  * <p>Private data:
  * -userStr:String
- * -decimal:long int
+ * -decimal:long
  *
  * <p>Constructor:
  * +Hex(userStr:String)
  *
  * <p>Public methods:
- * +toDecimal(userStr:String):int
+ * +toDecimal(userStr:String):long
  * +toString():String
  */
 public class Hex {
