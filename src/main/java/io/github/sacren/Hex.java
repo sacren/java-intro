@@ -27,8 +27,8 @@ public class Hex {
     }
 
     /** Hex method of conversion to the decimal number. */
-    public int toDecimal() {
-        int decimal = 0;
+    public long toDecimal() {
+        long decimal = 0;
         int position = 0;
         char[] a = userStr.toCharArray();
         for (char c : a) {
