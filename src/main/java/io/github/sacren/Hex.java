@@ -29,10 +29,9 @@ public class Hex {
     /** Hex method of conversion to the decimal number. */
     public long toDecimal() {
         long decimal = 0;
-        int position = 0;
+        int index = 0;
         char[] a = userStr.toCharArray();
         for (char c : a) {
-            position++;
             switch (c) {
                 case '0':
                 case '1':
@@ -56,7 +55,7 @@ public class Hex {
                 case 'E':
                 case 'f':
                 case 'F':
-                    decimal += Math.pow(16, a.length - position) * Character.digit(c, 16);
+                    decimal += Math.pow(16, a.length - ++index) * Character.digit(c, 16);
                     break;
                 default:
                     return -1;
