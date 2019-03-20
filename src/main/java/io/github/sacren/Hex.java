@@ -31,6 +31,10 @@ public class Hex {
         long decimal = 0;
         int index = 0;
         char[] a = userStr.toCharArray();
+        /* throw if the user doesn't have input */
+        if (a.length == 0) {
+            return -1;
+        }
         for (char c : a) {
             switch (c) {
                 case '0':
