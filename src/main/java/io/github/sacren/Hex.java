@@ -40,6 +40,9 @@ public class Hex {
             if (Character.digit(c, hex) == -1) {
                 return -1;
             }
+            /* (a.length - 1) is the position of the most significant hex bit.
+             * (a.length - ++index) happens to be the exponent.
+             */
             decimal += Math.pow(hex, a.length - ++index) * Character.digit(c, hex);
         }
         return decimal;
