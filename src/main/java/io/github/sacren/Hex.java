@@ -29,6 +29,7 @@ public class Hex {
     /** Hex method of conversion to the decimal number. */
     public long toDecimal() {
         long decimal = 0;
+        int hex = 16;
         int index = 0;
         char[] a = userStr.toCharArray();
         /* throw if the user doesn't have input */
@@ -36,10 +37,10 @@ public class Hex {
             return -1;
         }
         for (char c : a) {
-            if (Character.digit(c, 16) == -1) {
+            if (Character.digit(c, hex) == -1) {
                 return -1;
             }
-            decimal += Math.pow(16, a.length - ++index) * Character.digit(c, 16);
+            decimal += Math.pow(hex, a.length - ++index) * Character.digit(c, hex);
         }
         return decimal;
     }
