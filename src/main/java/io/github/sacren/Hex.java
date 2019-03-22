@@ -28,10 +28,10 @@ public class Hex {
 
     /** Hex method of conversion to the decimal number. */
     public long toDecimal() {
+        final char[] a = userStr.toCharArray();
+        final int hex = 16;
         long decimal = 0;
-        int hex = 16;
         int index = 0;
-        char[] a = userStr.toCharArray();
         int digit;
         /* throw if the user doesn't have input */
         if (a.length == 0) {
