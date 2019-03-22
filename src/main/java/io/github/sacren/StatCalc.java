@@ -88,8 +88,26 @@ public class StatCalc {
 
     /** StatCalc instance description. */
     public String toString() {
-        return String.format(
-                "[Count=%d, Sum=%.2f, Square Sum=%.2f, Max=%.2f, Min=%.2f]",
-                count, sum, squareSum, max, min);
+        String msg;
+        if (count == 0) {
+            msg = String.format("No stats at all!");
+        } else {
+            msg = String.format(
+                    "Number of entries is %d%n"
+                            + "Sum of the numbers in the dataset is %.2f%n"
+                            + "Sum of the square of numbers in the dataset is %.2f%n"
+                            + "Mean value of the dataset is %.2f%n"
+                            + "Standard deviation of the dataset is %.2f%n"
+                            + "Max number of the dataset is %.2f%n"
+                            + "Min number of the dataset is %.2f",
+                    count,
+                    sum,
+                    squareSum,
+                    getMean(),
+                    getStandardDeviation(),
+                    max,
+                    min);
+        }
+        return msg;
     }
 }
