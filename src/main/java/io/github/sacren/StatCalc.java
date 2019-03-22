@@ -31,6 +31,10 @@ public class StatCalc {
      * to the instance data by this method.
      */
     public void addStats(double number) {
+        if (number < 0) {
+            throw new IllegalArgumentException(
+                    String.format("%f is invalid!", number));
+        }
         count++;
         sum += number;
         squareSum += number * number;
