@@ -23,5 +23,23 @@ public class TestStatCalc {
         System.out.println("=== List of stats ===");
         System.out.println();
         System.out.println(data);
+        System.out.println();
+        System.out.println("=== Stats by calling methods ===");
+        System.out.println();
+        System.out.printf(
+                "Number of entries: %d%n"
+                        + "Sum of numbers: %.2f%n"
+                        + "Sum of squares: %.2f%n"
+                        + "Mean value: %.2f%n"
+                        + "Standard deviation: %.2f%n"
+                        + "Max number: %.2f%n"
+                        + "Min number: %.2f%n",
+                data.getCount(),
+                data.getSum(),
+                data.getSquareSum(),
+                data.getMean(),
+                data.getStandardDeviation(),
+                data.getMax(),
+                data.getMin());
     }
 }
