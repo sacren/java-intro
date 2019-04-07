@@ -10,7 +10,7 @@
  * +PairOfDice(die1:int, die2:int)
  *
  * <p>Public methods:
- * +getDice():int[]
+ * +pair():int[]
  * +getTotal():int
  * +roll():void
  * +toString():String
@@ -34,11 +34,11 @@ public class PairOfDice {
     }
 
     /** PairOfDice getter for each number on the dice rolled. */
-    public int[] getDice() {
-        int[] dice = new int[2];
-        dice[0] = die1;
-        dice[1] = die2;
-        return dice;
+    public int[] pair() {
+        int[] pair = new int[2];
+        pair[0] = die1;
+        pair[1] = die2;
+        return pair;
     }
 
     /** PairOfDice setter for die1. */
@@ -83,6 +83,6 @@ public class PairOfDice {
     public String toString() {
         return String.format(
                 "Pair of dice %s",
-                Arrays.toString(getDice()));
+                Arrays.toString(pair()));
     }
 }
