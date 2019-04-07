@@ -9,7 +9,7 @@
  * +Hex(userStr:String)
  *
  * <p>Public methods:
- * +toDecimal(userStr:String):long
+ * +decimal():void
  * +toString():String
  */
 public class Hex {
@@ -23,31 +23,33 @@ public class Hex {
     /** Hex constructor. */
     public Hex(String s) {
         userStr = s;
-        decimal = toDecimal();
+        decimal();
     }
 
     /** Hex method of conversion to the decimal number. */
-    public long toDecimal() {
+    public void decimal() {
         final char[] a = userStr.toCharArray();
         final int hex = 16;
-        long decimal = 0;
         int index = 0;
         int digit;
         /* throw if the user doesn't have input */
         if (a.length == 0) {
-            return -1;
+            decimal = -1;
+            return;
         }
+        /* convert to decimal */
+        decimal = 0;
         for (char c : a) {
             digit = Character.digit(c, hex);
             if (digit == -1) {
-                return -1;
+                decimal = -1;
+                return;
             }
             /* (a.length - 1) is the position of the most significant hex bit.
              * (a.length - ++index) happens to be the exponent.
              */
             decimal += Math.pow(hex, a.length - ++index) * digit;
         }
-        return decimal;
     }
 
     /** Hex instance description. */
