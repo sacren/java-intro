@@ -14,7 +14,7 @@ public class TestPairOfDice {
         PairOfDice dice = new PairOfDice(0, 0);
         int count = 0;
         System.out.println();
-        System.out.println("Roll the dice...");
+        System.out.println("=== Rolls ===");
         System.out.println();
         for ( ; ; ) {
             dice.roll();
