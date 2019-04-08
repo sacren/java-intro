@@ -21,8 +21,8 @@ public class Hex {
     private long decimal;
 
     /** Hex constructor. */
-    public Hex(String s) {
-        userStr = s;
+    public Hex(String userStr) {
+        this.userStr = userStr;
         decimal();
     }
 
