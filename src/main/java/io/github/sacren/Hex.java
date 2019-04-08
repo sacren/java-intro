@@ -13,9 +13,6 @@
  * +toString():String
  */
 public class Hex {
-    /* private static data */
-    private static final String ERROR_MSG = "Invalid user input!";
-
     /* private instance data */
     private String userStr;
     private long decimal;
@@ -55,7 +52,8 @@ public class Hex {
     /** Hex instance description. */
     public String toString() {
         if (decimal == -1) {
-            throw new IllegalArgumentException(ERROR_MSG);
+            throw new IllegalArgumentException(
+                    String.format("\"%s\" is invalid!", userStr));
         }
         return String.format(
                 "Hex:     %s%n"
