@@ -1,5 +1,5 @@
 /**
- * Hex class.
+ * Hex class for hex to decimal conversion.
  *
  * <p>Private data:
  * -usrStr:String
@@ -43,7 +43,7 @@ public class Hex {
         }
     }
 
-    /** Hex method of conversion to the decimal number. */
+    /** Hex method for hex to decimal conversion. */
     public long getDec() {
         long decimal = 0;
         int index = 0;
@@ -56,7 +56,7 @@ public class Hex {
         return decimal;
     }
 
-    /** Hex instance description. */
+    /** Hex instance printout. */
     public String toString() {
         return String.format(
                 "Hex:     %s%n"
