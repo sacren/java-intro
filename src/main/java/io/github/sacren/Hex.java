@@ -2,10 +2,11 @@
  * Hex class.
  *
  * <p>Private data:
- * -userStr:String
+ * -usrStr:String
+ * -inArray:char[]
  *
  * <p>Constructor:
- * +Hex(userStr:String)
+ * +Hex(usrStr:String)
  *
  * <p>Public methods:
  * +check():void
@@ -17,40 +18,40 @@ public class Hex {
     private static final int HEX = 16;
 
     /* private instance data */
-    private String userStr;
+    private String usrStr;
+    private char[] inArray;
 
     /** Hex constructor. */
-    public Hex(String userStr) {
-        this.userStr = userStr;
+    public Hex(String usrStr) {
+        this.usrStr = usrStr;
+        inArray = usrStr.toCharArray();
         check();
     }
 
     /** Hex method to validate user input. */
     public void check() {
-        final char[] a = userStr.toCharArray();
         /* throw if the user doesn't have input */
-        if (a.length == 0) {
+        if (inArray.length == 0) {
             throw new IllegalArgumentException(
-                    String.format("\"%s\" is invalid!", userStr));
+                    String.format("\"%s\" is invalid!", usrStr));
         }
-        for (char c : a) {
+        for (char c : inArray) {
             if (Character.digit(c, HEX) == -1) {
                 throw new IllegalArgumentException(
-                        String.format("\"%s\" is invalid!", userStr));
+                        String.format("\"%s\" is invalid!", usrStr));
             }
         }
     }
 
     /** Hex method of conversion to the decimal number. */
     public long getDec() {
-        final char[] a = userStr.toCharArray();
         long decimal = 0;
         int index = 0;
-        for (char c : a) {
-            /* (a.length - 1) is the position of the most significant hex bit.
-             * (a.length - ++index) happens to be the exponent.
+        for (char c : inArray) {
+            /* (inArray.length - 1) is the position of the most significant hex bit.
+             * (inArray.length - ++index) happens to be the exponent.
              */
-            decimal += Math.pow(HEX, a.length - ++index) * Character.digit(c, HEX);
+            decimal += Math.pow(HEX, inArray.length - ++index) * Character.digit(c, HEX);
         }
         return decimal;
     }
@@ -60,7 +61,7 @@ public class Hex {
         return String.format(
                 "Hex:     %s%n"
                         + "Decimal: %d",
-                userStr,
+                usrStr,
                 getDec());
     }
 }
