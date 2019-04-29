@@ -3,14 +3,13 @@
  *
  * <p>Private data:
  * -userStr:String
- * -decimal:long
  *
  * <p>Constructor:
  * +Hex(userStr:String)
  *
  * <p>Public methods:
  * +check():void
- * +decimal():void
+ * +getDec():long
  * +toString():String
  */
 public class Hex {
@@ -19,13 +18,11 @@ public class Hex {
 
     /* private instance data */
     private String userStr;
-    private long decimal;
 
     /** Hex constructor. */
     public Hex(String userStr) {
         this.userStr = userStr;
         check();
-        decimal();
     }
 
     /** Hex method to validate user input. */
@@ -45,8 +42,9 @@ public class Hex {
     }
 
     /** Hex method of conversion to the decimal number. */
-    public void decimal() {
+    public long getDec() {
         final char[] a = userStr.toCharArray();
+        long decimal = 0;
         int index = 0;
         for (char c : a) {
             /* (a.length - 1) is the position of the most significant hex bit.
@@ -54,6 +52,7 @@ public class Hex {
              */
             decimal += Math.pow(HEX, a.length - ++index) * Character.digit(c, HEX);
         }
+        return decimal;
     }
 
     /** Hex instance description. */
@@ -62,6 +61,6 @@ public class Hex {
                 "Hex:     %s%n"
                         + "Decimal: %d",
                 userStr,
-                decimal);
+                getDec());
     }
 }
